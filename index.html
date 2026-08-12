@@ -251,95 +251,48 @@
 
                         <!-- CONTACT FORM -->
                         <form
-                            id="contactForm"
-                            class="contact-form reveal"
-                            action="https://formsubmit.co/amyteams0@gmail.com"
-                            method="POST"
-                        >
+    id="contactForm"
+    class="contact-form reveal"
+    action="https://formsubmit.co/amyteams0@gmail.com"
+    method="POST"
+>
+    <input
+        type="hidden"
+        name="_subject"
+        value="New Message from AMY Team Website"
+    >
 
-                            <!-- FormSubmit Settings -->
-                            <input
-                                type="hidden"
-                                name="_subject"
-                                value="New Message from AMY Team Website"
-                            >
+    <input
+        type="hidden"
+        name="_captcha"
+        value="false"
+    >
 
-                            <!-- Disable captcha -->
-                            <input
-                                type="hidden"
-                                name="_captcha"
-                                value="false"
-                            >
+    <input
+        type="hidden"
+        name="_next"
+        value="https://amyteams.github.io/amyteam/"
+    >
 
-                            <!-- Send user to your website after submitting -->
-                            <!-- Replace with your real website URL later -->
-                            <!--
-                            <input
-                                type="hidden"
-                                name="_next"
-                                value="https://yourwebsite.com/thank-you.html"
-                            >
-                            -->
+    <div>
+        <label data-t="contact.form.name"></label>
+        <input type="text" name="name" required>
+    </div>
 
+    <div>
+        <label data-t="contact.form.email"></label>
+        <input type="email" name="email" required>
+    </div>
 
-                            <!-- NAME -->
-                            <div>
+    <div>
+        <label data-t="contact.form.message"></label>
+        <textarea name="message" rows="5" required></textarea>
+    </div>
 
-                                <label
-                                    data-t="contact.form.name">
-                                </label>
-
-                                <input
-                                    type="text"
-                                    name="name"
-                                    required
-                                >
-
-                            </div>
-
-
-                            <!-- EMAIL -->
-                            <div>
-
-                                <label
-                                    data-t="contact.form.email">
-                                </label>
-
-                                <input
-                                    type="email"
-                                    name="email"
-                                    required
-                                >
-
-                            </div>
-
-
-                            <!-- MESSAGE -->
-                            <div>
-
-                                <label
-                                    data-t="contact.form.message">
-                                </label>
-
-                                <textarea
-                                    name="message"
-                                    rows="5"
-                                    required
-                                ></textarea>
-
-                            </div>
-
-
-                            <!-- BUTTON -->
-                            <button
-                                class="btn primary"
-                                type="submit"
-                                id="sendButton"
-                            >
-                                Send Message
-                            </button>
-
-                        </form>
+    <button class="btn primary" type="submit" id="sendButton">
+        Send Message
+    </button>
+</form>
 
                     </div>
 
