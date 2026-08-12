@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AMY Team</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="background" aria-hidden="true"></div>
+
+    <div class="page">
+
+        <!-- NAVBAR -->
+        <nav id="navbar">
+            <div class="nav-inner">
+
+                <a href="#" class="logo">AMY Team</a>
+
+                <div class="nav-links" id="navLinks"></div>
+
+                <div class="nav-actions">
+
+                    <div class="lang-switcher">
+                        <button data-lang="en">🇺🇸 EN</button>
+                        <button data-lang="ar">🇮🇶 AR</button>
+                    </div>
+
+                    <a href="#contact"
+                       class="hire-nav"
+                       data-t="nav.hireUs">
+                    </a>
+
+                </div>
+
+                <button
+                    class="hamburger"
+                    id="hamburger"
+                    aria-label="Menu">
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </button>
+
+            </div>
+
+            <div class="mobile-menu" id="mobileMenu"></div>
+
+        </nav>
+
+
+        <main>
+
+            <!-- HERO -->
+            <section class="hero">
+
+                <div class="amy-letters" id="heroLetters"></div>
+
+                <div class="hero-copy">
+
+                    <h1>AMY Team</h1>
+
+                    <p
+                        class="hero-sub"
+                        data-t="hero.sub">
+                    </p>
+
+                    <p
+                        class="hero-desc"
+                        data-t="hero.desc">
+                    </p>
+
+                </div>
+
+                <div class="hero-buttons">
+
+                    <a
+                        href="#team"
+                        class="btn primary"
+                        data-t="hero.explore">
+                    </a>
+
+                    <a
+                        href="#contact"
+                        class="btn secondary"
+                        data-t="hero.hire">
+                    </a>
+
+                </div>
+
+                <div class="scroll-indicator">
+
+                    <span data-t="hero.scroll"></span>
+
+                    <i></i>
+                    <b></b>
+
+                </div>
+
+            </section>
+
+
+            <!-- ABOUT -->
+            <section id="about" class="section">
+
+                <div class="container">
+
+                    <div class="section-heading reveal">
+
+                        <span data-t="about.label"></span>
+
+                        <h2 data-t="about.title"></h2>
+
+                        <p data-t="about.body"></p>
+
+                    </div>
+
+                    <div
+                        class="card-grid services-grid"
+                        id="servicesGrid">
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- TEAM -->
+            <section id="team" class="section">
+
+                <div class="container">
+
+                    <div class="section-heading reveal">
+
+                        <span data-t="team.label"></span>
+
+                        <h2 data-t="team.title"></h2>
+
+                        <p data-t="team.hint"></p>
+
+                    </div>
+
+                    <div
+                        class="team-letters"
+                        id="teamLetters">
+                    </div>
+
+                    <div id="profileCard"></div>
+
+                </div>
+
+            </section>
+
+
+            <!-- WHY -->
+            <section id="why" class="section">
+
+                <div class="container wide">
+
+                    <div class="section-heading reveal">
+
+                        <span data-t="why.label"></span>
+
+                        <h2 data-t="why.title"></h2>
+
+                    </div>
+
+                    <div
+                        class="card-grid why-grid"
+                        id="whyGrid">
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- PROJECTS -->
+            <section id="projects" class="section">
+
+                <div class="container wide">
+
+                    <div class="section-heading reveal">
+
+                        <span data-t="projects.label"></span>
+
+                        <h2 data-t="projects.title"></h2>
+
+                    </div>
+
+                    <div
+                        class="card-grid projects-grid"
+                        id="projectsGrid">
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- CONTACT -->
+            <section id="contact" class="section">
+
+                <div class="container">
+
+                    <div class="section-heading reveal">
+
+                        <span data-t="contact.label"></span>
+
+                        <h2 data-t="contact.title"></h2>
+
+                        <p data-t="contact.sub"></p>
+
+                    </div>
+
+
+                    <div class="contact-grid">
+
+                        <!-- CONTACT INFORMATION -->
+                        <div class="contact-info reveal">
+
+                            <h3 data-t="contact.connect"></h3>
+
+                            <div id="contactMethods"></div>
+
+                            <div class="contact-cta">
+
+                                <p data-t="contact.cta"></p>
+
+                                <a
+                                    href="mailto:amyteams0@gmail.com"
+                                    class="btn primary glow"
+                                    data-t="contact.hire">
+                                </a>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- CONTACT FORM -->
+                        <form
+                            id="contactForm"
+                            class="contact-form reveal"
+                            action="https://formsubmit.co/amyteams0@gmail.com"
+                            method="POST"
+                        >
+
+                            <!-- FormSubmit Settings -->
+                            <input
+                                type="hidden"
+                                name="_subject"
+                                value="New Message from AMY Team Website"
+                            >
+
+                            <!-- Disable captcha -->
+                            <input
+                                type="hidden"
+                                name="_captcha"
+                                value="false"
+                            >
+
+                            <!-- Send user to your website after submitting -->
+                            <!-- Replace with your real website URL later -->
+                            <!--
+                            <input
+                                type="hidden"
+                                name="_next"
+                                value="https://yourwebsite.com/thank-you.html"
+                            >
+                            -->
+
+
+                            <!-- NAME -->
+                            <div>
+
+                                <label
+                                    data-t="contact.form.name">
+                                </label>
+
+                                <input
+                                    type="text"
+                                    name="name"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <!-- EMAIL -->
+                            <div>
+
+                                <label
+                                    data-t="contact.form.email">
+                                </label>
+
+                                <input
+                                    type="email"
+                                    name="email"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <!-- MESSAGE -->
+                            <div>
+
+                                <label
+                                    data-t="contact.form.message">
+                                </label>
+
+                                <textarea
+                                    name="message"
+                                    rows="5"
+                                    required
+                                ></textarea>
+
+                            </div>
+
+
+                            <!-- BUTTON -->
+                            <button
+                                class="btn primary"
+                                type="submit"
+                                id="sendButton"
+                            >
+                                Send Message
+                            </button>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+
+        <!-- FOOTER -->
+        <footer>
+
+            <div class="footer-inner">
+
+                <div class="logo">
+                    AMY Team
+                </div>
+
+                <div
+                    class="footer-links"
+                    id="footerLinks">
+                </div>
+
+                <div class="socials">
+
+                    <a href="#">GH</a>
+                    <a href="#">DC</a>
+                    <a href="#">IG</a>
+
+                </div>
+
+            </div>
+
+            <div
+                class="copyright"
+                data-t="footer.rights">
+            </div>
+
+        </footer>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
