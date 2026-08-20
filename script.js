@@ -180,7 +180,7 @@ const projects = [
         'Karadeniz Toptan', 
         'Modern e-commerce technology platform for mobile phones, premium accessories, and smart devices featuring a sleek dark futuristic design.', 
         ['C#', 'HTML', 'CSS', 'JavaScript'],
-        'images/karadeniz.PNG' // <--- Added the image file here
+        'images/karadeniz.jpg' // <--- Added the image file here
     ]
 ];
 
