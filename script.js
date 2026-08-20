@@ -176,12 +176,12 @@ const T = {
 
 
 const projects = [
-    ['NovaCMS', 'Headless CMS with real-time collaboration and visual block editing for modern teams.', ['React', 'Node.js', 'MongoDB']],
-    ['FluxDB', 'High-performance database toolkit with visual query builder and migration management.', ['C#', 'SQLite', 'WPF']],
-    ['PixelForge', '2D game engine built from scratch with Lua scripting and a full asset pipeline.', ['C++', 'Lua', 'OpenGL']],
-    ['ZenTrack', 'Smart task management with AI-assisted scheduling and productivity analytics.', ['React', 'Python', 'PostgreSQL']],
-    ['SwiftShop', 'Full-featured e-commerce platform with real-time inventory and payment gateway.', ['JavaScript', 'Java', 'MySQL']],
-    ['PulseAPI', 'REST API gateway with rate limiting, auth middleware, and live endpoint documentation.', ['Python', 'Redis', 'Docker']]
+    [
+        'Karadeniz Toptan', 
+        'Modern e-commerce technology platform for mobile phones, premium accessories, and smart devices featuring a sleek dark futuristic design.', 
+        ['C#', 'HTML', 'CSS', 'JavaScript'],
+        'images/karadeniz.PNG' // <--- Added the image file here
+    ]
 ];
 
 
@@ -388,8 +388,8 @@ function render() {
         projects.map(project => `
             <article class="project-card reveal">
                 <div class="project-cover">
-                    ${project[0][0]}
-                </div>
+    <img src="${project[3]}" alt="${project[0]}" style="width: 100%; height: 100%; object-fit: cover;">
+</div>
 
                 <div class="project-content">
                     <h3>${project[0]}</h3>
@@ -403,9 +403,8 @@ function render() {
                     </div>
 
                     <div class="project-actions">
-                        <a href="#">${t.projects.github}</a>
-                        <a href="#">${t.projects.demo}</a>
-                    </div>
+    <a href="https://karadeniztoptan.com.tr/" target="_blank">${t.projects.demo}</a>
+</div>
                 </div>
             </article>
         `).join('');
