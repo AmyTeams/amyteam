@@ -66,7 +66,7 @@ const T = {
             title: "Let's Build Something Amazing Together",
             sub: 'Ready to start your next project? We would love to hear from you.',
             email: 'Email',
-            discord: 'Discord',
+            facebook: 'Facebook',
             instagram: 'Instagram',
             connect: 'Connect with us',
             form: {
@@ -153,7 +153,7 @@ const T = {
             title: 'لنبني شيئاً رائعاً معاً',
             sub: 'هل أنت مستعد لبدء مشروعك القادم؟ يسعدنا الاستماع إليك.',
             email: 'البريد الإلكتروني',
-            discord: 'ديسكورد',
+            facebook: 'فيسبوك',
             instagram: 'إنستغرام',
             connect: 'تواصل معنا',
             form: {
@@ -174,16 +174,14 @@ const T = {
     }
 };
 
-
 const projects = [
     [
         'Karadeniz Toptan', 
         'Modern e-commerce technology platform for mobile phones, premium accessories, and smart devices featuring a sleek dark futuristic design.', 
         ['C#', 'HTML', 'CSS', 'JavaScript'],
-        'images/karadeniz.jpeg' // <--- Added the image file here
+        'images/karadeniz.jpeg'
     ]
 ];
-
 
 const skills = [
     'C#',
@@ -195,10 +193,8 @@ const skills = [
     'JavaScript'
 ];
 
-
 let lang = localStorage.getItem('amy-lang') || 'en';
 let active = null;
-
 
 const get = (obj, path) => {
     return path.split('.').reduce(
@@ -206,7 +202,6 @@ const get = (obj, path) => {
         obj
     );
 };
-
 
 function card([icon, title, description]) {
     return `
@@ -217,7 +212,6 @@ function card([icon, title, description]) {
         </article>
     `;
 }
-
 
 function renderTeam() {
     const t = T[lang];
@@ -289,7 +283,6 @@ function renderTeam() {
     `;
 }
 
-
 function observe() {
     const observer = new IntersectionObserver(
         entries => {
@@ -312,13 +305,11 @@ function observe() {
         });
 }
 
-
 function render() {
     const t = T[lang];
 
     document.documentElement.lang = lang;
     document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
-
 
     document.querySelectorAll('[data-t]').forEach(element => {
         element.textContent = get(
@@ -327,14 +318,12 @@ function render() {
         );
     });
 
-
     document.querySelectorAll('[data-lang]').forEach(button => {
         button.classList.toggle(
             'active',
             button.dataset.lang === lang
         );
     });
-
 
     document.getElementById('navLinks').innerHTML = [
         ['nav.home', '#'],
@@ -349,10 +338,8 @@ function render() {
         </a>
     `).join('');
 
-
     document.getElementById('mobileMenu').innerHTML =
         document.getElementById('navLinks').innerHTML;
-
 
     document.getElementById('footerLinks').innerHTML = [
         ['nav.about', '#about'],
@@ -366,23 +353,18 @@ function render() {
         </a>
     `).join('');
 
-
     document.getElementById('servicesGrid').innerHTML =
         t.services.items.map(card).join('');
 
-
     document.getElementById('whyGrid').innerHTML =
         t.why.items.map(card).join('');
-
 
     document.getElementById('heroLetters').innerHTML =
         ['A', 'M', 'Y']
             .map(letter => `<button type="button">${letter}</button>`)
             .join('');
 
-
     renderTeam();
-
 
     document.getElementById('projectsGrid').innerHTML =
         projects.map(project => `
@@ -409,10 +391,9 @@ function render() {
             </article>
         `).join('');
 
-
     document.getElementById('contactMethods').innerHTML = [
         ['✉️', t.contact.email, 'amyteams0@gmail.com'],
-        ['💬', t.contact.discord, 'https://discord.gg/w8MUdXDghU'],
+        ['📘', t.contact.facebook, 'https://www.facebook.com/people/AMY-Team-studio/61593271723871/'],
         ['📸', t.contact.instagram, '@amy__team']
     ].map(item => `
         <div class="contact-method">
@@ -424,7 +405,6 @@ function render() {
             </div>
         </div>
     `).join('');
-
 
     document.querySelector('[name="name"]').placeholder =
         t.contact.form.namePh;
@@ -438,13 +418,10 @@ function render() {
     document.getElementById('sendButton').textContent =
         t.contact.form.send;
 
-
     observe();
 }
 
-
 /* LANGUAGE BUTTONS */
-
 document.querySelectorAll('[data-lang]').forEach(button => {
     button.onclick = () => {
         lang = button.dataset.lang;
@@ -458,15 +435,12 @@ document.querySelectorAll('[data-lang]').forEach(button => {
     };
 });
 
-
 /* MOBILE MENU */
-
 document.getElementById('hamburger').onclick = () => {
     document
         .getElementById('mobileMenu')
         .classList.toggle('open');
 };
-
 
 document.addEventListener('click', event => {
     if (event.target.closest('.mobile-menu a')) {
@@ -475,7 +449,6 @@ document.addEventListener('click', event => {
             .classList.remove('open');
     }
 });
-
 
 /*
     IMPORTANT:
@@ -489,9 +462,7 @@ document.addEventListener('click', event => {
     https://formsubmit.co/amyteams0@gmail.com
 */
 
-
 /* NAVBAR SCROLL */
-
 window.addEventListener('scroll', () => {
     document
         .getElementById('navbar')
@@ -501,11 +472,8 @@ window.addEventListener('scroll', () => {
         );
 });
 
-
 /* BACKGROUND BLOBS */
-
 const bg = document.getElementById('background');
-
 
 [
     [720, 720, 'rgba(91,33,182,.24)', '-220px', '-160px'],
@@ -532,9 +500,7 @@ const bg = document.getElementById('background');
     bg.append(blob);
 });
 
-
 /* BACKGROUND PARTICLES */
-
 const code = [
     'const deploy = async () => {',
     'await docker.build({ tag: "amy" })',
@@ -547,7 +513,6 @@ const code = [
     'const [state, setState] = useState(null)',
     'export default function App() {'
 ];
-
 
 for (let i = 0; i < 30; i++) {
 
@@ -567,7 +532,6 @@ for (let i = 0; i < 30; i++) {
     bg.append(particle);
 }
 
-
 code.forEach((line, index) => {
 
     const codeElement = document.createElement('div');
@@ -585,7 +549,5 @@ code.forEach((line, index) => {
     bg.append(codeElement);
 });
 
-
 /* START WEBSITE */
-
 render();
