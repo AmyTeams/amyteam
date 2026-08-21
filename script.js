@@ -392,9 +392,9 @@ function render() {
         `).join('');
 
     document.getElementById('contactMethods').innerHTML = [
-        ['✉️', t.contact.email, 'amyteams0@gmail.com'],
-        ['📘', t.contact.facebook, 'https://www.facebook.com/people/AMY-Team-studio/61593271723871/'],
-        ['📸', t.contact.instagram, '@amy__team']
+        ['✉️', t.contact.email, '<a href="mailto:amyteams0@gmail.com">amyteams0@gmail.com</a>'],
+        ['📘', t.contact.facebook, '<a href="https://www.facebook.com/people/AMY-Team-studio/61593271723871/" target="_blank">AMY Team studio</a>'],
+        ['📸', t.contact.instagram, '<a href="https://instagram.com/amy__team" target="_blank">@amy__team</a>']
     ].map(item => `
         <div class="contact-method">
             <span class="emoji">${item[0]}</span>
